@@ -1,0 +1,89 @@
+#hero {
+
+  width: 100vw;
+  height: 100vh;
+  background: $background-color;
+  position: relative;
+
+  .hero-content {
+    height: 100%;
+    @include width(1000, 0.5);
+    max-width: 90vw;
+    justify-content: space-between;
+  }
+
+  .button-rocket-container {
+    background: url('../img/blue-rectangle.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include width(504, 0.5);
+    @include height(212, 0.5);
+    @include margin-padding(('p-l': (41, 0.5), 'p-r': (69, 0.5) ));
+  }
+
+  .rocket-wrap {
+    @include width(82, 0.5);
+  }
+
+  .left-section, .right-section {
+    @include height(568, 0.5);
+    width: 50%;
+  }
+
+  .left-section {
+    @include margin-padding(('p-t': (50, 0.5) ));
+    z-index: 1;
+    //@include width(503, 0.5);
+  }
+
+  .right-section {
+    //@include width(526, 0.5);
+    background: url('../img/full-hero-bg.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+  }
+
+  .circle1, .circle2 {
+    position: absolute;
+    z-index: 0;
+    display: none;
+  }
+
+  .dollar-wrap {
+    position: absolute;
+    z-index: 0;
+  }
+
+  .dollar1 {
+    right: 0;
+    top: 40%;
+    @include width(143, 1);
+  }
+
+  .dollar2 {
+    left: 0;
+    top: 40%;
+    @include width(125, 1);
+  }
+
+  .dollar3 {
+    left: 0;
+    top: 60%;
+    @include width(65, 1);
+  }
+
+  .circle1 {
+    background: radial-gradient(50% 50% at 50% 50%, #2B65E3 0%, rgba(196, 196, 196, 0) 100%);
+    opacity: 0.57;
+    @include width(529, 0.7);
+    @include height(529, 0.7);
+  }
+
+  .circle2 {
+    background: radial-gradient(50% 50% at 50% 50%, #7EA7FF 0%, rgba(196, 196, 196, 0) 100%);
+    opacity: 0.56;
+    @include width(712, 0.7);
+    @include height(712, 0.7);
+  }
+}

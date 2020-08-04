@@ -1,8 +1,8 @@
-require('./objects/header.js')
-require('./animations/parallax.js')
-require('./animations/ripple.js')
-
-require('./animations/init.js')
+// require('./objects/header.js')
+// require('./animations/parallax.js')
+// require('./animations/ripple.js')
+//
+// require('./animations/init.js')
 
 //import * as handlers from './animations/handlers.js'
 //import * as animationsList from './../project/js/animations-list.js'

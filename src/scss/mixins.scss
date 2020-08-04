@@ -76,6 +76,10 @@
   max-width: RelativeUnits($max-width, $scaler, $mode, horizontal);
 }
 
+@mixin height($min-height, $scaler: 1, $mode: desktop-middle) {
+  height: RelativeUnits($min-height, $scaler, $mode, horizontal);
+}
+
 @mixin min-height($min-height, $scaler: 1, $mode: desktop-middle) {
   min-height: RelativeUnits($min-height, $scaler, $mode, horizontal);
 }
@@ -117,10 +121,10 @@
 
     @if $name-property == 'm-r' {
       @if length($value-property) > 1 {
-        margin-left: RelativeUnits(nth($value-property, 1), nth($value-property, 2));
+        margin-right: RelativeUnits(nth($value-property, 1), nth($value-property, 2));
       }
       @else {
-        margin-left: RelativeUnits(nth($value-property, 1));
+        margin-right: RelativeUnits(nth($value-property, 1));
       }
     }
 
@@ -154,10 +158,10 @@
 
     @if $name-property == 'p-r' {
       @if length($value-property) > 1 {
-        padding-left: RelativeUnits(nth($value-property, 1), nth($value-property, 2));
+        padding-right: RelativeUnits(nth($value-property, 1), nth($value-property, 2));
       }
       @else {
-        padding-left: RelativeUnits(nth($value-property, 1));
+        padding-right: RelativeUnits(nth($value-property, 1));
       }
     }
   }
