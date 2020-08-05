@@ -1,6 +1,7 @@
 body {
   @include font('Roboto', 400);
-  color: $article-color;
+  color: $black;
+  background: white;
 }
 
 * {
@@ -8,15 +9,15 @@ body {
 }
 
 h2 {
-  @include FontLineSize(0.2, 0.2, 0.6, 30, 10);
+  @include FontLineSize(0.17, 0.17, 0.66, 30, 7);
   font-weight: 500;
 }
 h3 {
-  @include FontLineSize(0.15, 0.15, 0.7, 18, 10);
+  @include FontLineSize(0.12, 0.12, 0.76, 18, 7);
   font-weight: 400;
 }
 p {
-  @include FontLineSize(0.1, 0.1, 0.8, 14, 10);
+  @include FontLineSize(0.1, 0.1, 0.8, 14, 7);
   font-weight: 400;
 }
 
@@ -47,7 +48,7 @@ p {
   @include width(275, 0.5);
   @include height(65, 0.5);
   @include border-radius(51);
-  @include FontLineSize(0.15, 0.15, 0.7, 16, 10);
+  @include FontLineSize(0.11, 0.11, 0.78, 16, 10);
   font-weight: 700;
   text-align: center;
   letter-spacing: 0.01em;

@@ -1,0 +1,106 @@
+#cards {
+
+  .cards-content {
+    @include margin-padding(('p-t': (80, 0.5) ));
+    @include width(1110, 0.7);
+    max-width: 90vw;
+  }
+
+  .cards-array {
+    width: 100%;
+    @include margin-padding(('m-t': (50, 0.5) ));
+  }
+
+  .card {
+    @include width(265, 0.0);
+    @include min-height(488, 0);
+    @include border-radius(7);
+    @include margin-padding(('p-t': (35, 0), 'p-b': (25, 0), 'p-l': (28, 0.1), 'p-r': (28, 0.1) ));
+    margin: 9px 6px;
+    filter: drop-shadow(0px 4px 18px rgba(75, 75, 75, 0.25));
+    background: white;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    .upper {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      @include height(150, 0);
+      @include margin-padding(('m-b': (20, 0.2) ));
+    }
+
+    .img-wrap {
+      grid-area: pic;
+      background-repeat: no-repeat;
+      background-position: left center;
+      background-size: contain;
+      @include width(137, 0);
+    }
+
+    #pic1 { background-image: url('../img/pic1.svg'); }
+    #pic2 { background-image: url('../img/pic2.svg'); }
+    #pic3 { background-image: url('../img/pic3.svg'); }
+    #pic4 { background-image: url('../img/pic4.svg'); }
+    #pic5 { background-image: url('../img/pic5.svg'); }
+    #pic6 { background-image: url('../img/pic6.svg'); }
+    #pic7 { background-image: url('../img/pic7.svg'); }
+
+    .play-button {
+      grid-area: play;
+      background: $blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include width(49, 0);
+      @include height(49, 0);
+      border-radius: 50%;
+
+      &:hover {
+        background: $orange;
+        box-shadow: 0px 0px 5px 0px $ll-orange;
+      }
+    }
+
+    h3 {
+      grid-area: h;
+      @include min-height(56, 0);
+      @include margin-padding(('m-b': (23, 0.2) ));
+      font-weight: 500;
+    }
+
+    p {
+      grid-area: p;
+    }
+  }
+
+  .buy {
+    background-image: url('../img/buy-card.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .title, .subtitle {
+      text-align: center;
+      @include FontLineSize(0.2, 0.2, 0.6, 24, 7);
+      color: white;
+      @include width(174, 0.1);
+    }
+
+    .title {
+      font-weight: 700;
+      @include margin-padding(('m-b': (18, 0.2) ));
+    }
+
+    .subtitle {
+      font-weight: 400;
+      @include margin-padding(('m-b': (29, 0.2) ));
+    }
+
+    .button-accent {
+      @include width(174, 0.1);
+    }
+  }
+}

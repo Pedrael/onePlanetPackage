@@ -1,0 +1,103 @@
+#big-guy {
+
+  .title {
+    @include margin-padding(('m-b': (35, 0.5), 'm-t': (70, 0.5) ));
+  }
+
+  .subtitle {
+    font-weight: 400;
+    @include margin-padding(('m-b': (65, 0.5) ));
+  }
+
+  .circle-container {
+    @include width(930, 0.7);
+    max-width: 90vw;
+    @include margin-padding(('m-t': (55, 0.5) ));
+  }
+
+  .circle-background {
+    border-radius: 50%;
+    border: 3px solid $l-blue;
+    background-image: url('../img/big-guy.svg');
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    background-position: center 40%;
+    @include width(809, 1);
+    @include height(809, 1);
+    position: relative;
+
+    // &:before {
+    //   content: '';
+    //   width: 100%;
+    //   height: 100%;
+    //   top: 0; right: 0; bottom: 0; left: 0;
+    //   z-index: -1;
+    //   margin: 3px; /* !importanté */
+    //   border-radius: 50%; /* !importanté */
+    //   background: white;
+    //
+    // }
+  }
+
+  .item {
+    @include border-radius(12);
+    @include width(237, 0.2);
+    @include height(101, 0.2);
+    border: 1px solid $l-blue;
+    padding: RelativeUnits(20, 0.2);
+    @include margin-padding(('p-t': (15, 0.2) ));
+    background: white;
+    overflow: hidden;
+    cursor: pointer;
+
+    p { font-weight: 500; }
+
+    .number {
+      position: absolute;
+      color: $blue;
+      right: 4%;
+      bottom: 6%;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    &::before {
+      content: '';
+      background: $ll-blue;
+      position: absolute;
+      bottom: RelativeUnits(-101, 0.2);
+      right: RelativeUnits(-100, 0.2);
+      display: block;
+      @include width(183, 0.2);
+      @include height(121, 0.2);
+      border-radius: 50%;
+      z-index: -1;
+      transition: 0.5s;
+    }
+
+    &:hover::before {
+      height: 1000%;
+      width: 200%;
+    }
+  }
+
+  .center {
+    left: calc(50% - RelativeUnits(118.5, 0.2));
+  }
+
+  .top-negative {
+    top: -5%;
+  }
+
+  .button-container {
+    width: 100%;
+
+    p {
+      @include margin-padding(('m-t': (19, 0.4) ));
+    }
+
+  }
+
+}
