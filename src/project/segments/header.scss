@@ -2,28 +2,49 @@ header {
   @include min-height(120, 0.3);
   width: 100vw;
   position: fixed;
-  @include margin-padding(('p-l': (200), 'p-r': (200) ));
+  @include margin-padding(('p-l': (200, 1), 'p-r': (200, 1) ));
   z-index: 9;
-
-  .logo-container {
-    @include margin-padding(('m-r': (55, 0.5) ));
-    @include width(114, 0.5);
-  }
 
   .group {
     p { font-weight: 300; }
   }
 
   .phone-button {
-    @include width(57, 0.5);
-    @include height(57, 0.5);
-    @include border-radius(22);
     border: 1px solid $blue;
     @include margin-padding(('m-l': (26, 0.5) ));
+  }
 
-    &:hover {
-      background: $blue;
+  .logo-container {
+    @include margin-padding(('m-r': (55, 0.5) ));
+  }
+
+  @include _tablet-middle {
+    .group {
+      p { display: none; }
     }
   }
 
+  @include _phone-big {
+    h3 { font-size: 12px; }
+  }
+
+}
+
+.logo-container {
+  @include width(114, 0.5);
+}
+
+.phone-button {
+  @include width(57, 0.5);
+  @include height(57, 0.5);
+  border-radius: RelativeUnits(22, 0.5);
+  img { @include width(20.62, 0.5); }
+}
+
+.trans {
+  background: transparent;
+}
+
+.blue {
+  background: $ll-blue;
 }

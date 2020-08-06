@@ -1,0 +1,47 @@
+#timeline {
+
+  position: relative;
+  @include margin-padding(('m-t': (-65, 0.5) ));
+  background: linear-gradient(118.73deg, #E6F0FF 7.74%, #FAFCFF 74.29%, #F4F7FC 100.34%);
+
+  .title {
+    @include margin-padding(('m-t': (65, 0.5), 'm-b': (40, 0.5) ));
+    font-weight: 500;
+  }
+
+  .subtitle {
+    font-weight: 300;
+    @include margin-padding(('m-b': (80, 0.5) ));
+    @include width(690, 0.5);
+    max-width: 80vw;
+  }
+
+  .timeline-items {
+    @include width(1150, 0.7);
+
+    .first {
+      @include width(230, 0);
+      h2 {
+        @include FontLineSize(0.17, 0.17, 0.66, 25, 7);
+        font-weight: 500;
+      }
+      .schevron-wrap {
+        @include width(14, 0);
+        @include margin-padding(('m-l': (10, 0), 'm-t': (-50, 0.5)  ));
+      }
+    }
+
+    .item {
+
+      .icon-wrap {
+        @include width(96, 0);
+        @include height(96, 0);
+        background: white;
+        border-radius: 50%;
+        border: 1px solid $ll-blue;
+      }
+
+    }
+  }
+
+}

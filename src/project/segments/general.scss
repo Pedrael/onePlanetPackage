@@ -4,12 +4,18 @@ body {
   background: white;
 }
 
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
 * {
   z-index: 1;
 }
 
 h2 {
-  @include FontLineSize(0.17, 0.17, 0.66, 30, 7);
+  @include FontLineSize(0.3, 0.3, 0.4, 30, 7);
   font-weight: 500;
 }
 h3 {
@@ -46,9 +52,11 @@ p {
   justify-content: center;
   align-items: center;
   @include width(275, 0.5);
-  @include height(65, 0.5);
+  @include min-height(65, 0.5);
+  @include max-height(85, 0.5);
+  padding: 20px;
   @include border-radius(51);
-  @include FontLineSize(0.11, 0.11, 0.78, 16, 10);
+  @include FontLineSize(0.19, 0.19, 0.62, 16, 10);
   font-weight: 700;
   text-align: center;
   letter-spacing: 0.01em;
@@ -77,3 +85,9 @@ p {
     width: 200%;
   }
 }
+
+.-on-scale:hover {
+  animation: 0.1s ease-out 0s infinite ping;
+}
+
+@keyframes ping { from { transform: translateX(-1px); } to { transform: translateX(1px); }  }

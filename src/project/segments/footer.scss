@@ -1,0 +1,58 @@
+footer {
+  @include min-height(160, 0.5);
+  width: 100vw;
+  background: url('../img/footer.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include margin-padding(('p-l': (200), 'p-r': (200), 'p-t': (20, 0), 'p-b': (20, 0) ));
+
+  .phone-button {
+    border: 1px solid white;
+    @include margin-padding(('m-l': (26, 0.5) ));
+  }
+
+  .group {
+    margin: 20px;
+    flex-grow: 1;
+    h3, p, a {
+      color: white;
+    }
+    p, a {
+      font-size: 12px;
+    }
+  }
+
+  .social {
+    @include width(89, 0);
+    a {
+      @include width(38, 0);
+      @include height(38, 0);
+      border: 1px solid white;
+      border-radius: 50%;
+    }
+    img { @include width(20, 0); }
+  }
+
+  .copyright {
+    p {
+      letter-spacing: -0.03em;
+    }
+  }
+
+  .hrefs {
+    a {
+      line-height: 17px;
+      text-decoration: underline;
+    }
+  }
+
+  @include _tablet-small {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .hrefs {
+      text-align: center;
+    }
+  }
+}

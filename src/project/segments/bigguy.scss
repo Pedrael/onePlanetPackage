@@ -10,42 +10,31 @@
   }
 
   .circle-container {
-    @include width(930, 0.7);
+    @include width(930, 0.3);
     max-width: 90vw;
     @include margin-padding(('m-t': (55, 0.5) ));
   }
 
   .circle-background {
     border-radius: 50%;
-    border: 3px solid $l-blue;
-    background-image: url('../img/big-guy.svg');
+    background-image: url('../img/circled-guy.svg');
     background-repeat: no-repeat;
-    background-size: 50% auto;
+    background-size: contain;
     background-position: center 40%;
-    @include width(809, 1);
-    @include height(809, 1);
+    @include width(809, 0.7);
+    @include height(809, 0.7);
     position: relative;
-
-    // &:before {
-    //   content: '';
-    //   width: 100%;
-    //   height: 100%;
-    //   top: 0; right: 0; bottom: 0; left: 0;
-    //   z-index: -1;
-    //   margin: 3px; /* !importanté */
-    //   border-radius: 50%; /* !importanté */
-    //   background: white;
-    //
-    // }
   }
+
+  $item-s: 0.2;
 
   .item {
     @include border-radius(12);
-    @include width(237, 0.2);
-    @include height(101, 0.2);
+    @include width(237, $item-s);
+    @include height(101, $item-s);
     border: 1px solid $l-blue;
-    padding: RelativeUnits(20, 0.2);
-    @include margin-padding(('p-t': (15, 0.2) ));
+    padding: RelativeUnits(20, $item-s);
+    @include margin-padding(('p-t': (15, $item-s) ));
     background: white;
     overflow: hidden;
     cursor: pointer;
@@ -67,11 +56,11 @@
       content: '';
       background: $ll-blue;
       position: absolute;
-      bottom: RelativeUnits(-101, 0.2);
-      right: RelativeUnits(-100, 0.2);
+      bottom: RelativeUnits(-101, $item-s);
+      right: RelativeUnits(-100, $item-s);
       display: block;
-      @include width(183, 0.2);
-      @include height(121, 0.2);
+      @include width(183, $item-s);
+      @include height(121, $item-s);
       border-radius: 50%;
       z-index: -1;
       transition: 0.5s;
@@ -84,7 +73,7 @@
   }
 
   .center {
-    left: calc(50% - RelativeUnits(118.5, 0.2));
+    left: calc(50% - RelativeUnits(118.5, $item-s));
   }
 
   .top-negative {
@@ -98,6 +87,35 @@
       @include margin-padding(('m-t': (19, 0.4) ));
     }
 
+  }
+
+  @include _tablet-middle {
+
+    .circle-background {
+      position: absolute;
+      opacity: 0.5;
+     }
+
+    .circle-container {
+      flex-wrap: wrap;
+      @include margin-padding(('m-b': (85, 0.5) ));
+
+      .item, .button-container {
+        position: relative;
+        margin: 20px;
+      }
+
+      .button-container {
+        p {
+          text-align: center;
+          width: 60vw;
+        }
+      }
+    }
+  }
+
+  @include _phone-big {
+    .circle-background { display: none; }
   }
 
 }
