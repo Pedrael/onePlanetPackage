@@ -26,6 +26,49 @@ function enableHeaderScroll(header, topclass, otherclass) {
 
 enableHeaderScroll('header', 'trans', 'blue')
 
+let a = (test) => {
+  console.log(this, 'a')
+}
+
+let b = function(){
+  console.log(this, 'b')
+}
+
+function c() {
+  console.log(this, 'c')
+}
+
+const nigga = {
+  name: 'J',
+  a: function() {
+    console.log(this)
+  },
+  b: () => {
+    console.log(this)
+  }
+}
+
+// nigga.a()
+// nigga.b()
+
+console.log(this)
+
+window.setTimeout(function(){
+  console.log(1, this)
+}, 0)
+
+window.setTimeout(()=>{
+  console.log(2, this)
+}, 0)
+
+window.setTimeout(()=>{
+  console.log(3)
+}, 0)
+
+// a('test')
+// b()
+// c()
+
 
 
 

@@ -1,5 +1,7 @@
 #big-guy {
 
+  position: relative;
+
   .title {
     @include margin-padding(('m-b': (35, 0.5), 'm-t': (70, 0.5) ));
   }
@@ -13,6 +15,13 @@
     @include width(930, 0.3);
     max-width: 90vw;
     @include margin-padding(('m-t': (55, 0.5) ));
+  }
+
+  .blur-bg {
+    background: radial-gradient(50% 50% at 50% 50%, #D7E3FF 0%, #FFFFFF 100%);
+    opacity: 0.38;
+    @include width(835, 0.7);
+    @include height(835, 0.7);
   }
 
   .circle-background {
@@ -90,6 +99,8 @@
   }
 
   @include _tablet-middle {
+
+    .blur-bg { display: none; }
 
     .circle-background {
       position: absolute;

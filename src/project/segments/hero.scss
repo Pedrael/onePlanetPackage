@@ -64,12 +64,6 @@
       opacity: 0;
     }  }
 
-  .circle1, .circle2 {
-    position: absolute;
-    z-index: 0;
-    display: none;
-  }
-
   .dollar-wrap {
     position: absolute;
     z-index: 0;
@@ -77,7 +71,7 @@
 
   .dollar1 {
     right: 0;
-    top: -10%;//40%;
+    top: -20%;//40%;
     @include width(143, 1);
     animation: 8s linear 0s infinite dollar-move;
   }
@@ -96,18 +90,12 @@
     animation: 6s linear 0s infinite dollar-move;
   }
 
-  .circle1 {
-    background: radial-gradient(50% 50% at 50% 50%, #2B65E3 0%, rgba(196, 196, 196, 0) 100%);
-    opacity: 0.57;
-    @include width(529, 0.7);
-    @include height(529, 0.7);
-  }
-
   .circle2 {
     background: radial-gradient(50% 50% at 50% 50%, #7EA7FF 0%, rgba(196, 196, 196, 0) 100%);
     opacity: 0.56;
-    @include width(712, 0.7);
-    @include height(712, 0.7);
+    @include width(712, 0.4);
+    @include height(712, 0.4);
+    right: RelativeUnits(384, 2);
   }
 
   @include _tablet-middle {
@@ -118,6 +106,8 @@
 
   @include _tablet-small {
 
+    .circle2 { display: none; }
+    
     .hero-content {
       flex-direction: column;
       justify-content: center;
