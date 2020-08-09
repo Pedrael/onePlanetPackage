@@ -3,18 +3,18 @@
   position: relative;
 
   .title {
-    @include margin-padding(('m-b': (35, 0.5), 'm-t': (70, 0.5) ));
+    @include margin-padding(('m-b': (35, 1), 'm-t': (70, 0.1) ));
   }
 
   .subtitle {
     font-weight: 400;
-    @include margin-padding(('m-b': (65, 0.5) ));
+    @include margin-padding(('m-b': (65, 1) ));
   }
 
   .circle-container {
     @include width(930, 0.3);
     max-width: 90vw;
-    @include margin-padding(('m-t': (55, 0.5) ));
+    @include margin-padding(('m-t': (55, 1) ));
   }
 
   .blur-bg {

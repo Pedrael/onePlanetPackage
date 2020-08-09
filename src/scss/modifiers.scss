@@ -15,7 +15,7 @@
 
 .-hide-tablet-small {
 	@include _tablet-small {
-		display: none;
+		display: none !important;
 	}
 }
 

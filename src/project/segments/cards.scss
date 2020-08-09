@@ -2,7 +2,7 @@
 
   .cards-content {
     @include margin-padding(('p-t': (80, 0.5) ));
-    @include width(1110, 0.7);
+    @include width(1310, 0.5);
     max-width: 90vw;
   }
 
@@ -12,10 +12,10 @@
   }
 
   .card {
-    @include width(265, 0.0);
-    @include min-height(488, 0);
+    @include width(265, 0.2);
+    @include min-height(488, 0.2);
     @include border-radius(7);
-    @include margin-padding(('p-t': (35, 0), 'p-b': (25, 0), 'p-l': (28, 0.1), 'p-r': (28, 0.1) ));
+    @include margin-padding(('p-t': (35, 0.2), 'p-b': (25, 0.2), 'p-l': (28, 0.2), 'p-r': (28, 0.2) ));
     margin: 9px 6px;
     filter: drop-shadow(0px 4px 18px rgba(75, 75, 75, 0.25));
     background: white;

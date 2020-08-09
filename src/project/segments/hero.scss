@@ -1,7 +1,8 @@
 #hero {
 
   width: 100vw;
-  height: 100vh;
+  height: 100vh;//calc(100vh - #{RelativeUnits(120, 0.3)});
+  //min-height: 600px;
   background: $background-color;
   position: relative;
 
@@ -106,11 +107,14 @@
 
   @include _tablet-small {
 
+    height: 460px;
+
     .circle2 { display: none; }
-    
+
     .hero-content {
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
+      //align-items: flex-end;
     }
 
     .left-section {
@@ -118,12 +122,13 @@
     }
 
     .right-section {
-      width: 90%;
-      //@include min-height(638, 0.5);
+      width: 140%;
+      @include min-height(638, 0.5);
       right: 0;
       opacity: 0.5;
       position: absolute;
       z-index: 0;
+      left: 0;
     }
 
     .button-rocket-container {

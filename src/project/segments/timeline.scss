@@ -1,5 +1,17 @@
 #timeline {
 
+  .numerator {
+    font-size: 72px;
+    color: $ll-blue;
+    font-weight: 700;
+    z-index: 0;
+    left: -80%;
+    top: 10%;
+    display: none;
+
+    @include _tablet-small { display: block; }
+  }
+
   @include margin-padding(('p-b': (120, 0.5) ));
 
   position: relative;
@@ -116,6 +128,7 @@
 
     .item {
       @include width(96, 0.55);
+      position: relative;
 
       .icon-wrap {
         @include width(96, 0.55);
