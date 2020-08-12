@@ -1,12 +1,8 @@
 #timeline {
 
-  .numerator {
-    font-size: 72px;
-    color: $ll-blue;
-    font-weight: 700;
-    z-index: 0;
-    left: -80%;
-    top: 10%;
+  .schevron-bot {
+    @include margin-padding(('m-t': (30, 0) ));
+    width: 15px;
     display: none;
 
     @include _tablet-small { display: block; }
@@ -50,6 +46,7 @@
     @include _tablet-small {
       .line { display: none; }
       grid-template-areas: 'fst' 't1' 't2' 't3' 't4' 't5' 't6' 't7' 't8' 'lst';
+      grid-row-gap: 10px;
       justify-items: center;
       .item {
         align-items: center;
@@ -58,6 +55,8 @@
       .first {
         width: 80vw !important;
         text-align: center;
+        height: 80px;
+        align-items: flex-start;
         .schevron-wrap { display: none; }
       }
     }

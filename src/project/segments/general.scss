@@ -65,6 +65,11 @@ p {
   position: relative;
   overflow: hidden;
 
+  @include _tablet-small {
+    font-size: 12px;
+    min-width: 200px;
+  }
+
   &::before {
     content: '';
     background: $l-orange;

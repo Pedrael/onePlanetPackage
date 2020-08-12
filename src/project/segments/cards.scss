@@ -37,7 +37,7 @@
       background-repeat: no-repeat;
       background-position: left center;
       background-size: contain;
-      @include width(137, 0);
+      @include width(137, 0.29);
     }
 
     #pic1 { background-image: url('../img/pic1.svg'); }
@@ -54,12 +54,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      @include width(49, 0);
-      @include height(49, 0);
+      min-width: 40px;
+      min-height: 40px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
 
       img {
-        @include width(45, 0);
+        min-width: 36px;
+        width: 44px;
       }
 
       &:hover {
@@ -105,6 +108,7 @@
 
     .button-accent {
       @include width(174, 0.1);
+      min-width: auto !important;
     }
   }
 }
