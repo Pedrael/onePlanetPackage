@@ -95,4 +95,21 @@ p {
   animation: 0.1s ease-out 0s infinite ping;
 }
 
+.youtube-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.none {
+  display: none !important;
+}
+
 @keyframes ping { from { transform: translateX(-1px); } to { transform: translateX(1px); }  }

@@ -1,5 +1,7 @@
 #cards {
 
+  position: relative;
+
   .cards-content {
     @include margin-padding(('p-t': (80, 0.5) ));
     @include width(1310, 0.5);
