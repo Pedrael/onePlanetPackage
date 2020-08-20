@@ -23,7 +23,7 @@ footer {
   }
 
   .social {
-    @include width(89, 0.3);
+    @include width(127, 0.3);
     a {
       @include width(38, 0.3);
       @include height(38, 0.3);

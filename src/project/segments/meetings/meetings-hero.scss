@@ -2,6 +2,15 @@
   header {
     border-bottom: 1px solid #D1E2F5;
   }
+  footer {
+    background: #4878C0;
+
+    .social {
+      @include width(137, 0.3);
+      img { @include width(38, 0.3); }
+      a { border: none; }
+    }
+  }
 }
 
 #hero-meetings {
