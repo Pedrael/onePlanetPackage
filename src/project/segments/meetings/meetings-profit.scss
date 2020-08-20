@@ -1,0 +1,119 @@
+#profit-meetings {
+
+  position: relative;
+  @include margin-padding(('p-b': (230, 0.9) ));
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: calc(100% - #{RelativeUnits(240, 1)});
+    top: RelativeUnits(140, 1);
+    transform: skewY(-4deg);
+    background: linear-gradient(180deg, #ECF4F9 0%, #FFFFFF 44.66%, #F8FBFD 73.89%, #EEF6FA 100%);
+  }
+
+  .items-array, .profit-content {
+    @include width(1400, 0.9);
+    max-width: 86vw;
+  }
+
+  .items-array {
+
+    .item {
+      @include margin-padding(('p-t': (37, 0.5), 'p-b': (37, 0.5), 'p-l': (10, 0), 'p-r': (10, 0) ));
+      margin: 10px;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 22px #EBEBEB;
+      @include border-radius(14);
+      flex-grow: 1;
+      text-align: center;
+      min-width: 205px;
+      @include max-width(285, 0.5);
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+
+      .img-wrap {
+        @include width(43, 0.4);
+        @include margin-padding(('m-b': (20, 0.4) ));
+      }
+
+      p {
+        @include FontLineSize(0.19, 0.19, 0.62, 14, 7);
+      }
+    }
+  }
+
+  .profit-content {
+
+    @include margin-padding(('m-t': (130, 1) ));
+
+    .left-section, .right-section {
+      width: 50%;
+    }
+
+    .right-section {
+
+      h2 {
+        @include FontLineSize(0.4, 0.4, 0.2, 36, 10);
+        @include margin-padding(('m-b': (30, 0.5) ));
+      }
+
+      h3 {
+        @include margin-padding(('m-b': (30, 0.5) ));
+      }
+
+      p {
+        @include margin-padding(('m-b': (40, 0.5) ));
+      }
+
+    }
+
+    @include _tablet-small {
+      .left-section {
+        display: none;
+      }
+      .right-section {
+        width: 100%;
+        text-align: center;
+
+        .meetings-button {
+          align-self: center;
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+
+#video-meetings {
+  @include margin-padding(('p-t': (37, 0.5), 'p-b': (55, 0.5) ));
+
+  .video-container {
+    @include width(847, 0.7);
+    max-width: 80vw;
+    overflow: hidden;
+    padding-top: RelativeUnits(475, 0.7);
+    position: relative;
+    @include margin-padding(('m-b': (56, 0.5) ));
+
+    iframe {
+      border: 0;
+     height: 100%;
+     left: 0;
+     position: absolute;
+     top: 0;
+     width: 100%;
+    }
+  }
+
+  .meetings-button {
+    min-width: fit-content;
+    min-width: -moz-fit-content;
+    min-width: -webkit-fit-content;
+  }
+}

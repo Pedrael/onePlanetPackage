@@ -1,0 +1,96 @@
+.meetings, .email {
+  header {
+    border-bottom: 1px solid #D1E2F5;
+  }
+}
+
+#hero-meetings {
+  width: 100vw;
+  @include min-height(680, 0.5);
+  //min-height: 100vh;
+  @include margin-padding(('p-t': (140, 0.5) ));
+
+  .hero-meetings-content {
+    @include width(1400, 0.7);
+    max-width: 90vw;
+  }
+
+  .left-section, .right-section {
+    //width: 50%;
+    height: 100%;
+  }
+
+  .left-section {
+    @include min-width(583, 0.6);
+    h2 {
+      @include FontLineSize(0.4, 0.4, 0.2, 36, 10);
+      @include margin-padding(('m-b': (60, 0.5) ));
+      color: #0c0c0c;
+    }
+
+    h3 {
+      @include FontLineSize(0.25, 0.25, 0.5, 24, 10);
+      @include margin-padding(('m-b': (60, 0.5) ));
+    }
+  }
+
+  .right-section {
+    @include min-width(583, 0.9);
+    img { width: 70%; }
+  }
+
+  .like-wrap {
+    @include width(23, 0.2);
+    @include margin-padding(('m-r': (22, 0.5) ));
+  }
+
+  .button-container {
+    max-width: 100%;
+    p {
+      @include FontLineSize(0.25, 0.25, 0.5, 16, 7);
+      @include margin-padding(('m-r': (36, 0.9) ));
+    }
+  }
+
+  @include _tablet-small {
+    .left-section {
+      width: 100%;
+    }
+    .right-section {
+      position: absolute;
+      right: 0;
+      justify-content: flex-end;
+      z-index: 0;
+      opacity: 0.4;
+      img {
+        width: 58%;
+      }
+    }
+  }
+}
+
+.meetings-button {
+  background: linear-gradient(93.52deg, #FA5C52, #FF8969);
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  @include min-width(235, 0.3);
+  @include width(285, 0.5);
+  @include min-height(64, 0.5);
+  @include max-height(85, 0.5);
+  padding: 20px;
+  @include border-radius(51);
+  @include FontLineSize(0.19, 0.19, 0.62, 16, 10);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+
+  &:hover {
+    background: transparent;
+    border: 1px solid #FA5C52;
+    color: #0c0c0c;
+  }
+}

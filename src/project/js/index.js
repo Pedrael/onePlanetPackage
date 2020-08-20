@@ -54,4 +54,22 @@ function toggleVideo() {
   })
 }
 
+function toggleUl() {
+  let list = document.querySelector('#list-of-checkboxes')
+  if(list !== null) {
+    let checkboxes = list.querySelectorAll('input')
+    checkboxes.forEach((ch) => {
+      ch.addEventListener('click', () => {
+        ch.checked ? ch.parentNode.classList.add('checked') : ch.parentNode.classList.remove('checked')
+      })
+    })
+    document.addEventListener('DOMContentLoaded', () => {
+      checkboxes.forEach((ch) => {
+          ch.checked ? ch.parentNode.classList.add('checked') : ch.parentNode.classList.remove('checked')
+      })
+    })
+  }
+}
+
 toggleVideo()
+toggleUl()
