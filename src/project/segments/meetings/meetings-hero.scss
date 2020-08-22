@@ -80,7 +80,7 @@
 
 .meetings-button {
   background: linear-gradient(93.52deg, #FA5C52, #FF8969);
-  border: 1px solid transparent;
+  //border: 1px solid transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,10 +96,43 @@
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
+  position: relative;
+  overflow: hidden;
 
-  &:hover {
-    background: transparent;
-    border: 1px solid #FA5C52;
-    color: #0c0c0c;
+  &::before {
+    content: '';
+    background: linear-gradient(93.52deg, #f54237, #ff987c, #f54237);
+    background-size: 400%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: 0.5s;
+    z-index: -1;
+    opacity: 0;
   }
+
+  &:hover::before {
+    opacity: 1;
+    border-radius: 0;
+    animation: grad 8s linear infinite;
+  }
+
+  @keyframes grad {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 400%;
+    }
+  }
+
+  // &:hover {
+  //   background: transparent;
+  //   border: 1px solid #FA5C52;
+  //   color: #0c0c0c;
+  // }
 }

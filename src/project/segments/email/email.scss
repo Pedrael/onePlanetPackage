@@ -170,3 +170,38 @@
     }
   }
 }
+
+#video-array-email {
+
+  .video-content {
+    @include width(1600, 0.7);
+    max-width: 85vw;
+    @include margin-padding(('m-t': (70, 0.5), 'm-b': (57, 0.5) ));
+
+    .item {
+      @include width(285, 0.3);
+      margin: 20px auto;
+
+      p {
+        @include margin-padding(('m-b': (26, 0.5) ));
+      }
+
+      .video-container {
+        @include width(285, 0.3);
+        max-width: 80vw;
+        overflow: hidden;
+        padding-top: RelativeUnits(160, 0.3);
+        position: relative;
+
+        iframe {
+          border: 0;
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
