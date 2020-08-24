@@ -58,6 +58,12 @@ module.exports = {
                 sourceMap: true
               }
             }
+            // {
+            //   loader: "postcss-loader",
+            //   options: {
+            //     sourceMap: true
+            //   }
+            // }
           ]
         })
       },
@@ -69,6 +75,7 @@ module.exports = {
     ]
   },
   plugins: [
+    require('autoprefixer'),
     new ExtractTextPlugin({
       filename: './css/style.bundle.css',
       allChunks: true,

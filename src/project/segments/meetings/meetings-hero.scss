@@ -99,26 +99,47 @@
   position: relative;
   overflow: hidden;
 
+  // &::before { // gradient
+  //   content: '';
+  //   background: linear-gradient(93.52deg, #f54237, #ff987c, #f54237);
+  //   background-size: 400%;
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   border-radius: 50%;
+  //   transition: 0.5s;
+  //   z-index: -1;
+  //   opacity: 0;
+  // }
+  //
+  // &:hover::before {
+  //   opacity: 1;
+  //   border-radius: 0;
+  //   animation: grad 8s linear infinite;
+  // }
+
   &::before {
     content: '';
-    background: linear-gradient(93.52deg, #f54237, #ff987c, #f54237);
-    background-size: 400%;
+    background: $ld-orange;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: RelativeUnits(-141, 0.5);
+    right: RelativeUnits(-150, 0.5);
     display: block;
-    width: 100%;
-    height: 100%;
+    @include width(263, 0.5);
+    @include height(167, 0.5);
     border-radius: 50%;
     transition: 0.5s;
     z-index: -1;
-    opacity: 0;
   }
 
   &:hover::before {
-    opacity: 1;
-    border-radius: 0;
-    animation: grad 8s linear infinite;
+    background: $lld-orange;
+    height: 1000%;
+    width: 200%;
+
   }
 
   @keyframes grad {
