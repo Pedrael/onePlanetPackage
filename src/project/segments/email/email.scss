@@ -1,8 +1,8 @@
 #almost {
   width: 100vw;
   @include min-height(450, 0.5);
-  @include margin-padding(('p-t': (140, 0.5), 'p-b': (45, 0.5) ));
-  border-bottom: 1px solid #B7C9F3;
+  @include margin-padding(('p-t': (140, 0.5), 'p-b': (54, 0.5) ));
+  //border-bottom: 1px solid #B7C9F3;
 
   .almost-content {
     @include width(1400, 0.7);
@@ -174,13 +174,13 @@
 #video-array-email {
 
   .video-content {
-    @include width(1600, 0.7);
-    max-width: 95vw;
-    @include margin-padding(('m-t': (70, 0.5), 'm-b': (57, 0.5) ));
+    @include width(1400, 0.7);
+    max-width: 90vw;
+    @include margin-padding(('m-t': (30, 0.5), 'm-b': (57, 0.5) ));
     gap: 20px;
 
     .item {
-      @include width(285, 0.2);
+      @include width(590, 0.6);
       margin: 20px auto;
 
       p {
@@ -188,10 +188,10 @@
       }
 
       .video-container {
-        @include width(285, 0.2);
+        @include width(590, 0.6);
         //max-width: 80vw;
         overflow: hidden;
-        padding-top: RelativeUnits(160, 0.2);
+        padding-top: RelativeUnits(325, 0.6);
         position: relative;
         @include border-radius(13);
 
@@ -212,6 +212,22 @@
           padding-top: 164px;
         }
       }
+    }
+  }
+}
+
+#arrow-email {
+  .arrow-wrap {
+    @include width(38, 0.5);
+    animation: move-arrow 1s linear infinite alternate;
+  }
+
+  @keyframes move-arrow {
+    0% {
+      transform: translateY(-3px);
+    }
+    100% {
+      transform: translateY(3px);
     }
   }
 }
