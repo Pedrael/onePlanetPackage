@@ -71,5 +71,36 @@ function toggleUl() {
   }
 }
 
+function togglePopup() {
+  let open = document.querySelectorAll('.js-open-popup')
+  let popup = document.querySelector('.popup-message')
+  let close = popup.querySelector('.js-close-popup')
+  if(open != null) {
+    open.forEach((i) => {
+      i.addEventListener('click', (e) => {
+        e.preventDefault()
+        popup.style.display = 'flex'
+      })
+    })
+  }
+
+  if(close != null) {
+    close.addEventListener('click', () => {
+      popup.style.display = 'none'
+    })
+  }
+
+  let switchItem = popup.querySelector('.switch')
+  switchItem.addEventListener('click', () => {
+    let switches = switchItem.querySelectorAll('.switch-btn')
+    switches.forEach((sw) => {
+      sw.classList.toggle('switched')
+    })
+    popup.querySelector('.social-if').classList.toggle('disabled')
+    popup.querySelector('.contact-if').classList.toggle('disabled')
+  })
+}
+
 toggleVideo()
 toggleUl()
+togglePopup()

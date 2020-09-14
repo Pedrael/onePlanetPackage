@@ -36,6 +36,66 @@
 
     </header>
 
+    <div class="popup-message flex -ai-c -jc-c">
+      <div class="content flex -column -ai-c">
+        <div class="cross-wrap js-close-popup"><img src="img/meetings/cross.svg" alt=""></div>
+        <div class="switch flex">
+          <div class="switch-btn flex -ai-c -jc-c switched">соц. сети</div>
+          <div class="switch-btn flex -ai-c -jc-c">email</div>
+        </div>
+        <div class="flex -column -ai-c social-if">
+
+          <h2>Быстрая регистрация через:</h2>
+
+          <div class="array flex">
+            <a class="wrap" href="https://t.me/OnePlanetClubBot?start=ZGw6NjU4MQ">
+              <img src="img/meetings/tg.svg" alt="">
+            </a>
+            <a class="wrap" href="https://vk.com/app7336203_-197700151#r=ZGw6NjU4MQ">
+              <img src="img/meetings/vk.svg" alt="">
+            </a>
+            <a class="wrap" href="https://direct.smartsender.eu/redirect?continue=viber%3A%2F%2Fpa%3Fcontext%3DZGw6NjU4MQ%26chatURI%3Doneplanetclub">
+              <img src="img/meetings/vb.svg" alt="">
+            </a>
+          </div>
+
+          <div class="list flex -wrap">
+            <div class="item flex">
+              <p class="number flex -ai-c -jc-c">1</p>
+              <p>Выберите соц.сеть</p>
+            </div>
+            <div class="item flex">
+              <p class="number flex -ai-c -jc-c">2</p>
+              <p>После открытия мессенджера, нажмите на кнопку "начать" или "запустить"</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="flex -column -ai-c contact-if disabled">
+
+          <div class="input-item flex -column">
+            <p>Введите своё имя</p>
+            <div class="input-container flex -ai-c">
+              <input type="text" placeholder="Имя" required>
+              <div class="like"><img src="img/meetings/like-or.svg" alt=""></div>
+            </div>
+          </div>
+
+          <div class="input-item flex -column">
+            <p>Введите свой email</p>
+            <div class="input-container flex -ai-c">
+              <input type="text" placeholder="Email" required>
+              <div class="like"><img src="img/meetings/like-or.svg" alt=""></div>
+            </div>
+          </div>
+
+          <button type="submit" class="submit">Зарегистрироваться</button>
+
+        </form>
+
+      </div>
+    </div>
+
     <section id="hero-meetings" class="flex -jc-c">
 
       <div class="hero-meetings-content flex -jc-c pos-r">
@@ -49,7 +109,7 @@
               <img src="img/meetings/like.svg" alt="">
             </div>
             <p class="light">Участие бесплатное</p>
-            <a href="" class="meetings-button">Принять участие</a>
+            <a href="" class="meetings-button js-open-popup">Принять участие</a>
           </div>
 
         </div>

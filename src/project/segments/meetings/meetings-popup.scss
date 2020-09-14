@@ -1,0 +1,201 @@
+.popup-message {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(34, 34, 34, 0.92);
+  z-index: 99;
+  display: none;
+
+  .disabled {
+    display: none;
+  }
+
+  .content {
+    @include width(472, 0.2);
+    @include min-height(372, 0.2);
+    @include border-radius(13);
+    background: #ffffff;
+    @include margin-padding(('p-t': (53, 0.2), 'p-b': (35, 0.2) ));
+    position: relative;
+  }
+
+  .cross-wrap {
+    position: absolute;
+    @include width(13, 0.2);
+    top: RelativeUnits(16, 0.2);
+    right: RelativeUnits(24, 0.2);
+    cursor: pointer;
+  }
+
+  .switch {
+    border: 1px solid #FF8266;
+    @include border-radius(10);
+    @include height(46, 0.2);
+    @include width(214, 0.2);
+    overflow: hidden;
+
+    .switch-btn {
+      height: 100%;
+      width: 50%;
+      color: #FF8266;
+      @include FontLineSize(0.15, 0.15, 0.7, 14, 7);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .switched {
+      color: #ffffff;
+      background: linear-gradient(93.52deg, #FA5C52 -2.41%, #FF8969 106.83%);
+    }
+  }
+
+  .social-if {
+    @include margin-padding(('p-t': (37, 0.2) ));
+
+    h2 {
+      font-weight: 500;
+      @include FontLineSize(0.15, 0.15, 0.7, 23, 10);
+    }
+
+    .wrap {
+      display: block;
+      @include width(48, 0.2);
+      @include margin-padding(('m-l': (6, 0.2), 'm-r': (6, 0.2) ));
+    }
+
+    .array {
+      @include margin-padding(('p-t': (37, 0.2), 'p-b': (32, 0.2) ));
+    }
+
+    .list {
+      @include width(388, 0.2);
+
+      .item {
+        width: 50%;
+        //min-width: 200px;
+        margin: 0 auto;
+      }
+
+      .number {
+        color: #FB6255;
+        border-radius: 50%;
+        border: 1px solid #FB6255;
+        @include min-width(23, 0.2);
+        @include height(23, 0.2);
+        @include margin-padding(('m-r': (10, 0.2) ));
+        font-weight: 700;
+      }
+
+      p {
+        @include FontLineSize(0.15, 0.15, 0.7, 12, 7);
+      }
+    }
+  }
+
+  .contact-if {
+    @include width(214, 0.2);
+
+    input {
+      border: 1px solid #9B9B9B;
+      @include border-radius(10);
+      display: flex;
+      align-items: center;
+      width: 100%;
+      @include height(56, 0.2);
+      @include FontLineSize(0.15, 0.15, 0.7, 14, 7);
+      font-weight: 500;
+      font-family: inherit;
+      color: #FC6B5A;
+      @include margin-padding(('p-l': (22, 0.2), 'p-r': (22, 0.2) ));
+
+
+      &::-webkit-input-placeholder { /* Edge */
+        color: #9B9B9B;
+      }
+
+      &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: #9B9B9B;
+      }
+
+      &::placeholder {
+        color: #9B9B9B;
+      }
+
+      &:valid {
+        border: 1px solid #FC6B5A;
+      }
+
+      &:valid + .like {
+        display: block;
+      }
+
+      &:invalid {
+        box-shadow: none;
+      }
+
+      &:-moz-submit-invalid {
+        box-shadow: none;
+      }
+
+      &:-moz-ui-invalid {
+        box-shadow:none;
+      }
+    }
+
+    .input-item {
+      width: 100%;
+      @include margin-padding(('m-t': (28, 0.2) ));
+    }
+
+    .input-container {
+      position: relative;
+      @include margin-padding(('m-t': (10, 0.2) ));
+    }
+
+    .like {
+      @include width(14, 0.2);
+      position: absolute;
+      right: RelativeUnits(28, 0.2);
+      display: none;
+    }
+
+    .submit {
+      background: linear-gradient(93.52deg, #FA5C52 -2.41%, #FF8969 106.83%);
+      @include border-radius(10);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      @include height(58, 0.2);
+      font-weight: 500;
+      @include FontLineSize(0.15, 0.15, 0.7, 14, 7);
+      @include margin-padding(('m-t': (24, 0.2), 'm-b': (31, 0.2) ));
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+
+      &::before {
+        content: '';
+        background: $ld-orange;
+        position: absolute;
+        top: RelativeUnits(-141, 0.5);
+        right: RelativeUnits(-150, 0.5);
+        display: block;
+        @include width(263, 0.5);
+        @include height(167, 0.5);
+        border-radius: 50%;
+        transition: 0.5s;
+        z-index: -1;
+      }
+
+      &:hover::before {
+        background: $lld-orange;
+        height: 1000%;
+        width: 200%;
+
+      }
+    }
+  }
+
+}
