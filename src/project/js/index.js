@@ -91,7 +91,7 @@ function togglePopup() {
   }
 
   let switchItem = popup.querySelector('.switch')
-  switchItem.addEventListener('click', () => {
+  if(switchItem != null) switchItem.addEventListener('click', () => {
     let switches = switchItem.querySelectorAll('.switch-btn')
     switches.forEach((sw) => {
       sw.classList.toggle('switched')
